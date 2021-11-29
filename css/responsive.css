@@ -21,10 +21,10 @@
     margin:0;
     width:100%;
   }
-#content {
-    max-width: 100%;
-    padding:3rem 16px 7.5rem;
-}
+    #content {
+        max-width: 100%;
+        padding:2rem 0 5rem;
+    }
 body:not(.browse) #content{
     max-width: 77.5rem;
     padding:3rem 0 7.5rem;
@@ -44,7 +44,7 @@ body:not(.browse) #content{
         justify-content: center;
         align-items: center;
         margin-right:16px;
-        border:1px solid #fff;
+        border:1px solid var(--gray-200);
         padding: 4px;
         border-radius:8px;
     }
@@ -54,7 +54,7 @@ body:not(.browse) #content{
     header .top-bar .title-bar button:after{
         content:"\e91c";
         font-size:1.8rem;
-        color:#fff;
+        color:var(--gray-600);
         font-family:xeicon;
     }
 
@@ -83,15 +83,26 @@ body[class*="ex3-"] footer .inner{
     }
 
   
-  /* main page */
+  body.user-bar header{
+    position:relative;
+    background-color:#fff;
+  }
+    
   body.main.user-bar header{
     top:62.5px;
+    background-color:transparent;
   }
   body.main #content {
      padding:0;
      margin:0;
      max-width:9999px;
   }  
+  header.main .top-bar .title-bar button{
+    border-color:#fff;
+  }
+  header.main .top-bar .title-bar button:after{
+    color:#fff;
+  }
 
 }
 
@@ -129,6 +140,15 @@ body[class*="ex3-"] footer .inner{
     }
     .banner-main-search .title-area{
         text-align:left;
+    }
+    .banner-main-search .title-area h2{
+      line-height:1.2
+    }
+    .banner-main-search .title-area h2 br{
+      display:block;
+    }
+    .banner-main-search .title-area p{
+      font-size:14px;
     }
     .banner-main-search .form-search{
         width:auto;
@@ -193,6 +213,47 @@ body[class*="ex3-"] footer .inner{
         margin-bottom:36px;
     }
 
+    /**** 기록 ****/
+
+    body.search-page header:after{
+        height:12.25rem;
+    }
+    body.search-page .search-box-area{
+        height:auto;
+        background-color:var(--gray-100);
+        margin:0 -16px;
+        padding:0 16px 2rem;
+    }
+    body.search-page .search-box-area > div:nth-child(2){
+        margin-bottom:0 !important;
+    }
+    body.search-page .search-facets-active{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    body.search-page .search-facets-active > li{
+        margin:0.3rem 0 0 0;
+    }
+
+    
+    body.search-page .search-results-wrapper {
+        padding-top:1rem;
+        flex-direction: column;
+    }
+    body.search-page .search-facets {
+        flex-basis: 100%;
+        padding: 0;
+    }    
+
+    body.search-page .search-results .resource-list.grid > li {
+        flex-basis:47%;
+        margin:0 6% 2rem 0;
+    }
+    body.search-page .search-results .resource-list.grid > li:nth-child(2n){
+        margin-right:0;
+    }
+
+    
   
 }
 
