@@ -600,7 +600,8 @@ body.search-page .field button{
 
 
 body.search-page .search-facets-active{
-    display:flex
+    display:flex;
+    flex-wrap: wrap;
 }
 body.search-page .search-facets-active > li{
     margin:0.5rem 0 0 0;
