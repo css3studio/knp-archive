@@ -43,123 +43,156 @@ body:not(.browse) #content{
         display:flex;
         justify-content: center;
         align-items: center;
-        margin:0;
+        margin-right:16px;
+        border:1px solid #fff;
+        padding: 4px;
+        border-radius:8px;
     }
     header .top-bar .title-bar button > i{
         display:none;
     }
     header .top-bar .title-bar button:after{
         content:"\e91c";
-        font-size:2rem;
+        font-size:1.8rem;
         color:#fff;
         font-family:xeicon;
     }
 
+    footer{
+        padding:40px 0;
+        margin:0;
+    }
+    footer .inner{
+        display:block;   
+        margin:0 32px;
+    }
     
-    
-    
-    
-    
-    
-header .dropdown.menu > li > a{
-    color:var(--gray-700);
-    padding:0;
-    margin-left:2.5rem;
-}
-header .dropdown.menu > li.active > a,
-header .dropdown.menu > li > a:hover{
-    color:var(--knp-green);
-    background-color:transparent;
-    text-decoration:none;
-}
-
-footer{
-    background-color:var(--gray-100);
-    max-width:9999rem;
-    padding:6.25rem 0;
-}
-footer .inner{
-    display:flex;   
-    flex-direction:row-reverse;
-}
 body[class*="ex3-"] footer .inner{  
     max-width: 77.5rem;
 }
-footer .menu-footer{
-    width:50%;
-    display:flex;  
-}
-footer .menu-footer dl{
-    width:33.3333%;
-}
-footer .menu-footer dl dt{
-    color:var(--gray-700);
-    margin-bottom:0.75rem;
-}
-footer .menu-footer dl dd li{
-    margin-bottom:0.75rem;
-}
-footer .menu-footer dl dd a{
-   color:var(--gray-500);
-}
-footer .info-area{
-    width:50%;
-}
-footer .logo{
-    display:block;
-    width:13.125rem;
-    height:3.125rem;
-    text-indent: -9999px;
-    background:url(../images/logo-sub.png) no-repeat center center;
-    background-size:contain;  
-    margin-bottom:1.75rem;
-}
-footer .contacts{
-    font-size:0.75rem;
-    color:var(--gray-400);
-    line-height:1.3333;
-}
+    footer .menu-footer{
+        width:auto;
+        display:block;  
+    }
+    footer .menu-footer dl{
+        width:auto;
+        margin-bottom:32px
+    }
+    footer .info-area{
+        width:auto;
+    }
 
-  
-  
-  
-  
-  
-  
-  
   
   /* main page */
   body.main.user-bar header{
-      top:62.5px;
+    top:62.5px;
   }
-    body.main #content {
-        padding:0;
-        margin:0;
-        max-width:9999px;
-    }  
+  body.main #content {
+     padding:0;
+     margin:0;
+     max-width:9999px;
+  }  
 
 }
 
 /*모바일 폰*/
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  html {
-    font-size: 14px
-  }
+    html {
+        font-size: 14px
+    }
 
-  body {
-    overflow-x: hidden
-  }
+    body {
+        overflow-x: hidden
+    }
 
-  input[type=text],
-  input[type=number],
-  input[type=password],
-  input[type=date],
-  input[type=email] {
-    font-size: 14px;
-    height: 32px
-  }
+    input[type=text],
+    input[type=number],
+    input[type=password],
+    input[type=date],
+    input[type=email] {
+        font-size: 14px;
+        height: 32px
+    }
+    .title-area{
+        margin-bottom: 24px;
+    }
+    .title-area h2{
+        font-size:24px;
+        margin-bottom:8px;
+    }
+    .title-area p{
+        font-size:14px;
+    }
 
-  
+    .banner-main-search .inner{
+        height:508px;
+    }
+    .banner-main-search .title-area{
+        text-align:left;
+    }
+    .banner-main-search .form-search{
+        width:auto;
+    }
+    .banner-main-search .form-search input{
+        width:100%;
+    }
+    .menu-quick-main{
+        padding:40px 0;
+    }
+    .menu-quick-main ul{
+        display:block;
+    }
+    .menu-quick-main ul li{
+        width:auto;
+        margin-bottom:8px;
+    }
+
+    .slider-carousel-main{
+        padding:40px 0;
+    }
+    .slider-carousel-main .title-area p{
+        width:190px;
+    }
+    .slider-carousel-main .slick-list{
+        margin:0 -16px;
+    }
+    .slider-carousel-main .slick-arrow{
+        top:-4.5rem
+    }
+    .slider-carousel-main .slick-next{
+        right:28px
+    }
+    .slider-carousel-main .slick-next:before{
+        font-size:3rem;
+    }
+    .slider-carousel-main .slick-prev{
+        right:80px
+    }
+    .slider-carousel-main .slick-prev:before{
+        font-size:3rem;
+    }
+
+    .slider-carousel-main ul li{
+        padding:0 8px;
+    }
+    .slider-carousel-main ul li a{
+        width:60px;
+    }
+    .slider-carousel-main ul li a img{
+        width:60px;
+        height:60px;
+    }
+
+    .menu-quick-content{
+        padding:40px 0;
+    }
+    .menu-quick-content .content-area ul{
+        display:block;
+    }
+    .menu-quick-content .content-area ul > li{
+        margin-bottom:36px;
+    }
+
   
 }
 
