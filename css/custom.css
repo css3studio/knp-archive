@@ -102,6 +102,12 @@ h2{
     max-width: 77.5rem;
     padding:3rem 0 7.5rem;
 }
+#section-content {
+    padding-left:0 !important;;
+}
+.browse-controls{
+    margin:0 0 2rem;
+}
 body:not(.browse) #content{
     max-width: 77.5rem;
     padding:3rem 0 7.5rem;
@@ -193,6 +199,7 @@ body.main header{
     left:0;
     width:100%;
     z-index:10;
+    background: transparent;
 }
 body.main.user-bar header{
     top:38px;
@@ -278,7 +285,7 @@ body.main #content {
 .banner-main-search .inner{
     position:relative;
 }
-    
+/*
 .banner-main-search .play-asmr{
     position:absolute;
     bottom:2rem;
@@ -306,9 +313,6 @@ body.main #content {
     font-size:0;
     text-align:center;
     border-radius:1.25rem;
-/*    text-indent:-9999px;
-    background:url(../images/btn-asmr01.png) no-repeat center center;
-    background-size:contain;  */
 }
 .banner-main-search .play-asmr a:hover{
     text-decoration:none;
@@ -331,6 +335,81 @@ body.main #content {
     position:absolute;
     width:0;
 }
+*/
+
+.banner-main-search .play-asmr-new{
+    position:absolute;
+    bottom:2rem;
+    left:0;
+    width:18.875rem;
+}
+.banner-main-search .play-asmr-new .player{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;    
+    height:3.5rem;
+    width:18.875rem;
+    padding:0 0.5rem 0 3.5rem;
+    background-color:rgba(24, 24, 27, 0.5);
+    border-radius:1.75rem;
+}
+.banner-main-search .play-asmr-new .player p{
+    font-size:0.75rem;
+    color:var(--gray-100);
+    width:8.25rem;
+    text-align:left;
+    margin-right:1rem;
+}
+.banner-main-search .play-asmr-new .player a{
+    width:2.5rem;
+    height:2.5rem;
+    line-height:2.5rem;
+    background-color:var(--knp-green);
+    font-size:0;
+    text-align:center;
+    border-radius:1.25rem;
+}
+.banner-main-search .play-asmr-new .player a:hover{
+    text-decoration:none;
+}
+.banner-main-search .play-asmr-new .player a:after{
+    content:"\ea3e";
+    font-family:xeicon;
+    color:#fff;
+    font-size:1.8rem;
+}
+.banner-main-search .play-asmr-new .player.playing a:after{
+    content:"\ea3b";
+}
+.banner-main-search .play-asmr-new .player:not(.playing) a:after{
+    position:relative;
+    left:2px
+}
+.banner-main-search .play-asmr-new .player audio{
+    visibility: hidden;
+    position:absolute;
+    width:0;
+}
+.banner-main-search .play-asmr-new .rolling{
+    position:absolute;
+    left:1rem;
+    top:0.6rem;
+    font-size:0;
+}
+.banner-main-search .play-asmr-new .rolling:after {
+    content: "\e977";
+    font-size: 1.5rem;
+    font-family: xeicon;
+    color:var(--gray-300);
+}
+.banner-main-search .play-asmr-new .rolling:hover{
+    text-decoration:none;
+}
+.banner-main-search .play-asmr-new .rolling:hover:after{
+    text-decoration:none;
+    color:var(--knp-green);
+}
+
 .title-area{
     margin-bottom:2.5rem;
 }
@@ -616,6 +695,10 @@ body.search-page .search-facets-active > li > a{
     display:flex;
     align-items: center;
 }
+body.search-page .search-facets-active > li > a:hover{
+    text-decoration:none;
+    border-color:var(--knp-green);
+}
 body.search-page .search-facets-active > li > a:after{
     content:none;
 }
@@ -645,7 +728,7 @@ body.search-page .search-results-wrapper .search-results > h5{
 }
 body.search-page .search-results-header {
     display:flex;
-    justify-content:end;
+    justify-content:space-between;
     align-items: center;
 }
 body.search-page .search-results-header .search-sort{
@@ -691,6 +774,85 @@ body.search-page .search-results-header .search-view-option a{
     align-items: center;
     padding:0 1.125rem;
 }
+body.search-page .search-results-header .search-view-option a:hover{
+    border-color:var(--knp-green);
+    color:var(--gray-700)
+}
+
+.pagination{
+    display:flex;
+    align-items: center;
+    margin:0 !important;
+}
+.pagination h4{
+    font-size:1.25rem;
+    color:var(--gray--600);
+    margin-right:2.5rem;
+}
+.pagination form{
+    display:flex;
+    align-items: center;
+    margin-right:2rem;
+}
+.pagination form input{
+    margin-right:0.5rem;
+    box-shadow: none;
+    width:3rem !important;
+    text-align:center;
+    text-indent:0;
+}
+.pagination form span{
+    color:var(--gray-500);
+}
+.pagination > .button{
+    background:#fff;
+    border:1px solid var(--gray-200);
+    height:2.5rem;
+    display:flex;
+    align-items: center;
+    padding: 0 1.125rem;
+    border-radius: 1.25rem;
+    margin-bottom:0;
+}
+.pagination > .button:hover{
+    border-color:var(--knp-green);
+    background:#fff;
+}
+.pagination > .button:before{
+	content:"\e93e";
+	font-size:1rem;
+	font-family:xeicon;
+    color:var(--gray-700)
+}
+.pagination > .button.previous{
+    margin-right:0.5rem;
+}
+.pagination > .button.previous:before{
+	content:"\e93b";
+	font-size:1rem;
+	font-family:xeicon;
+}
+
+.sorting-list{
+    margin-bottom:0 !important;
+}
+.sorting-list select{
+  width:auto;
+  padding:0.5rem 2.125rem 0.5rem 1rem !important;
+  color:var(--gray-700);
+  font-weight:normal;
+  border: 1px solid var(--gray-200);
+  border-radius:1.25rem;
+  font-family: inherit;
+  font-size:1rem;
+  background: url(../images/bl-down.png) no-repeat;
+    background-position:right 1rem center;
+  background-size:12px auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+    margin-left:0.4rem;
+}
 
 
 body.search-page .search-facets {
@@ -712,6 +874,13 @@ body.search-page .search-facets {
     font-size:1.25rem;
     font-weight:bold;
     color:var(--gray-900);
+}
+.accordion-item:last-child .accordion-title{
+    border-bottom:none;
+}
+.accordion-item > a:hover{
+    text-decoration:none;
+    color:var(--knp-green);
 }
 .accordion-item > a:before{
     content:"\e941";
@@ -910,6 +1079,7 @@ body.search-page .search-results .resource-list.grid .description {
     text-overflow:ellipsis
 }
 
+/*
 nav.pagination {
 	margin-bottom:0;
     text-align:center;
@@ -983,6 +1153,7 @@ body.search-page .pagination-previous a:after{
     font-family:xeicon;
     margin:0 0.3rem;
 }
+*/
 
 /*** 탐방코스 취향찾기 ***/
 .facets-container{
@@ -1136,6 +1307,23 @@ body.faceted-browse-page #section-content > ul > li .description {
     -webkit-box-orient:vertical;
     overflow:hidden;
     text-overflow:ellipsis
+}
+
+.search-no-result{
+    height:31.25rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-no-result .center-middle{
+    text-align:center
+}
+.search-no-result .center-middle .thumb{
+    margin-bottom:1.5rem;
+}
+.search-no-result .center-middle p{
+    margin-bottom:1.5rem;
+    font-size:1.875rem;
 }
 
 /*** item view ***/
@@ -1595,7 +1783,11 @@ nav.breadcrumbs > .breadcrumbs li > a{
 nav.breadcrumbs > .breadcrumbs li,
 nav.breadcrumbs > .breadcrumbs li.active{
     color:var(--knp-green);
-    font-size:0.875rem
+    font-size:0.875rem;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    overflow:hidden;
 }
 
 .archive-mountain .title-banner {
@@ -1605,6 +1797,9 @@ nav.breadcrumbs > .breadcrumbs li.active{
     height:24.75rem;
     display:flex;
     align-items:end;
+}
+.carousel-block .slick-list{
+    margin:0 -8px;
 }
 .archive-mountain .title-banner h2{
     color:#fff;
@@ -1799,6 +1994,9 @@ body[class*="ex3-"] .blocks img{
     border-radius:1rem;
 }
 
+body[class*="ex3-"] .blocks .guide-book iframe{
+    height:43.75rem;
+}
 body[class*="ex3-"] .blocks .responsive-embed{
     position:relative; 
     width:100%; 
